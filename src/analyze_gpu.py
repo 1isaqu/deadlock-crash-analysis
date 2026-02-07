@@ -1,8 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
-import os
 
 plt.style.use('dark_background')
 plt.rcParams['figure.facecolor'] = '#121212'
@@ -70,8 +68,9 @@ def analyze_gpu_metrics(csv_path):
             # Anotação do último valor válido
             valid_data = df[col].dropna()
             if not valid_data.empty:
+                last_idx_val = valid_data.index[-1]
                 last_v = valid_data.iloc[-1]
-                last_t = df[df[col] == last_v]['timestamp'].iloc[-1]
+                last_t = df.loc[last_idx_val, 'timestamp']
                 axes[i].scatter(last_t, last_v, color='white', s=50, zorder=5)
                 axes[i].annotate(f'{last_v:.1f}', (last_t, last_v), textcoords="offset points", xytext=(5,5), color='white', fontweight='bold')
 
