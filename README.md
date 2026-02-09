@@ -41,7 +41,6 @@ The visualization above splits the system's vital signs into six synchronous sub
 - **Zona Pré-Crash (Últimos 20s):** Highlighted in the red shaded area, we see a dramatic divergence. 
 - **The Anomaly:** At exactly **t=66s**, while the game is attempting to load the match, the **GPU Usage and Clock drop abruptly to near-zero**. This is the classic signature of a software hang where the GPU is waiting for data that never arrives from the CPU/Memory.
 
-> *"Nota-se que, enquanto a temperatura se mantém perfeitamente estável em 65°C, há uma queda abrupta da utilização e do clock da GPU para níveis de inatividade, coincidindo exatamente com o momento em que os FPS cessam. A GPU não falhou por calor; ela ficou sem instruções."*
 
 ## 💡 The "Aha!" Moment & Root Cause
 By correlating the GPU drop with our system-wide metrics, we found the true culprit:
