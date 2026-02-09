@@ -88,4 +88,4 @@ df = pd.read_csv('your_log_file.csv', na_values='N/A')
 ```
 
 ---
-**Found this useful?** Let's connect on [LinkedIn](https://www.linkedin.com/in/isaquerr/) or open an Issue here to discuss Source 2 optimization! 🚀
+**Found this useful?** Let's connect on [LinkedIn](https://www.linkedin.com/in/isaque-carvalho-silva-164554282/) or open an Issue here to discuss Source 2 optimization! 🚀
